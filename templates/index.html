@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>testing</title>	
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="static/node_modules/socket.io-client/dist/socket.io.js"></script>
+ </head>
+ <body>
+    <img id="streamer-image">
+    <script type="text/javascript">
+       $(document).ready(function() {
+	  const image_elem = document.getElementById("streamer-image");
+	  
+	  var socket = io('/');
+	  
+	  socket.on('connect', function() {
+	     console.log('User has connected');
+	  });
+	  
+	  socket.on('response', function(msg) {
+	    image_elem.src = "data:image/jpeg;base64,"+msg;
+	  });
+	});
+	  
+    </script>
+ </body>
+</html>
