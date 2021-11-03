@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Petank</title>	
+  <link rel="stylesheet" href="static/css/style.css">
+ </head>
+ <body>
+  <div class="img">
+    <img id="streamer-image">
+  </div>
+  <div class="wrapper-car-controller">
+    <button class="btn btn-up" id="forward">W</button>
+    <button class="btn btn-down" id="back">S</button>
+    <button class="btn btn-left"id="left">A</button>
+    <button class="btn btn-right"id="right">D</button>
+  </div>
+  <div class="wrapper-turret-controller">
+    <button class="btn btn-left" id="turret-left">j</button>
+    <button class="btn btn-right" id="turret-right">l</button>
+    <button class="btn btn-down" id="fire">*</button>
+  </div>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="static/node_modules/socket.io-client/dist/socket.io.js"></script>
+  <script src="static/js/index.js"></script>
+ </body>
+</html>
