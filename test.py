@@ -98,4 +98,4 @@ def fire_turret(data):
 if __name__ == "__main__":
     ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
     ser.flush()
-    socketio.run(app, debug=True, host='192.168.86.33', port=5000)
+    socketio.run(app, debug=True, host='0.0.0.0', port=5000)
