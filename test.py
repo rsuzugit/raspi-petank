@@ -85,19 +85,17 @@ def action_control(data):
             turret_left(data)
         elif data == '6':
             turret_right(data)
-        elif data == '7':
-            fire(data)
         else:
             stop(data)
 
 
-#@socketio.on('stop')
-#def stop_motors(data):
-#    print(data)
-#    ser.write(str("8").encode('utf-8'))
+@socketio.on('fire')
+def fire_turret(data):
+    print(data)
+    ser.write(str("7").encode('utf-8'))
 
 
 if __name__ == "__main__":
     ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
     ser.flush()
-    socketio.run(app, debug=True, host='0.0.0.0 port=5000)
+    socketio.run(app, debug=True, host='192.168.86.33', port=5000)

@@ -17,6 +17,26 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.main {
+  padding: 16px;
+  margin-bottom: 30px;
+  color: lightblue;
+}
+
+.camera-bg {
+  position: fixed; 
+  min-width: 50%;
+  min-height: 50%;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
 .wrapper-car-controller {
   width: 320px;
   height: 220px;
